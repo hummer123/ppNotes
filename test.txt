@@ -1,4 +1,13 @@
 hello world!
 
+<<<<<<< HEAD
 what the fuck
 
+=======
+
+
+OK!!!
+
+
+again
+>>>>>>> e1af2b3be1ba81403243e9bfc15cc677d7264116
