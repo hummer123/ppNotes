@@ -9,7 +9,7 @@ OK,开始进入正题。本软件实现的功能有如下:</br>
 
 ### 主界面-次界面如下：
 ![image](https://github.com/hummer123/UserSerialPort/raw/master/README-PIC/major.png)
-![image](https://github.com/hummer123/UserSerialPort/raw/master/README-PIC/mainor.png)
+![image](https://github.com/hummer123/UserSerialPort/raw/master/README-PIC/minor.png)
 
 ## 串口的数据接收
 Qt中由于串口类使用的是外带的，**这个类在串口接收时可能将一帧数据会分几次接收**，有两种方法可以解决：
@@ -27,5 +27,5 @@ Qt中由于串口类使用的是外带的，**这个类在串口接收时可能�
 ![image](https://github.com/hummer123/UserSerialPort/raw/master/README-PIC/sin.png)
 
 > 公司控温的效果图
-![image](https://github.com/hummer123/UserSerialPort/raw/master/README-PIC/mainor.bmp)
+![image](https://github.com/hummer123/UserSerialPort/raw/master/README-PIC/temp.bmp)
 
