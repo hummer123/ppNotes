@@ -11,5 +11,7 @@ git fetch origin
 change master branch commit
 
 
-test master and iss53 --->merge(in master)aaa
+
+test master and iss53 --->merge (in master)
 		      --->change(in master)
+		      --->cahnge(in iss53)
