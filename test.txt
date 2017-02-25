@@ -1,11 +1,11 @@
 hello world!
 
-<<<<<<< HEAD
 what the fuck!!!
-
-=======
 
 
 OK!!!
 
 git fetch origin
+
+
+change master branch commit
