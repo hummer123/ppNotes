@@ -1,0 +1,49 @@
+Makefile 一般的格式：
+
+target : componets
+TAB rule
+
+这里要说的是关于Makefile的三个变量：$@, $^, $< 分别代表的含义是
+$@  目标文件
+$^  所有的依赖文件
+$<  第一个依赖文件
+
+例如， 有几个文件 [ main.c(a.h, b.h), a.c(a.h), b.c(b.h), a.h, b.h ]
+单个文件的gcc编译:
+gcc -c main.c
+gcc -c a.c
+gcc -c b.c
+gcc -o main main.o a.o b.o
+
+用Makefile写:
+main : main.o a.o b.o
+	gcc -o main main.o a.o b.o
+main.o : main.c a.h b.h
+	gcc -c main.c
+a.o : a.c a.h
+	gcc -c a.c
+b.o : a.c b.h
+	gcc -c b.c
+
+使用Makefile的三个变量来优化:
+main : main.o a.o b.o
+	gcc -o $@ $^
+main.o : main.c a.h b.h
+	gcc -c $<
+a.o : a.c a.h
+	gcc -c $<
+b.o : b.c b.h
+	gcc -c $<
+
+GNU的make很强大，它可以自动推导文件及文件依赖关系，于是我们就没必要在每个[.o]文件后
+都写上类似的命令，因为make会自动识别，并自己推导命令，所以新的Makefile:
+main : main.o z.o b.o 
+	gcc -o $@ $^
+.c.o :
+	gcc -c $<
+
+OK, 这就是Makefile的三个变量
+
+
+	
+
