@@ -38,7 +38,7 @@ b.o : b.c b.h
 GNU的make很强大，它可以自动推导文件及文件依赖关系，于是我们就没必要在每个[.o]文件后
 都写上类似的命令，因为make会自动识别，并自己推导命令，所以新的Makefile:
 main : main.o a.o b.o 
-	gcc -o $@ $^;
+	gcc -o $@ $^
 .c.o :
 	gcc -c $<
 
